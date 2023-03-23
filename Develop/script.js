@@ -6,9 +6,6 @@ function generatePassword() {
   
   // Prompting user for password criteria and validating choices
   
-  // A password Array variable to concat password positve choices
-  pswCrit = "";
-  
   // 1. length 8 to 128 characters - minimum number of characters set in the promp
   var numOfChar = prompt("Enter number of characters between 8 to 128", 8);
   if (numOfChar < 8 || numOfChar > 128) {
@@ -16,51 +13,44 @@ function generatePassword() {
     return;
   } else {
     alert("You chose " + numOfChar + " characters");
+    // An array variable to concat password criteria
+    pswCrit = "";
   }
-  console.log(numOfChar);
-
   // 2. lowercase characters
   var lowCaseLet = prompt("Lowercase letters?, OK = YES Cancel = NO");
   if (lowCaseLet !== null) {
-    alert("You chosen to have LOWERCASE LETTERS in your password");
+    alert("CONFIRMED LOWERCASE LETTERS");
     lowCaseLet = ['abcdefghijklmnopqrstuvwxyz'];
     pswCrit = pswCrit.concat(lowCaseLet);
-    console.log(pswCrit);
   } else {
-    alert("NO LOWERCASE LETTERS will be in your password");
+    alert("NO LOWERCASE LETTERS");
   }
-    
   // 3. uppercase characters
   var upprCaseLet = prompt("Uppercase letters? OK = YES Cancel = NO");
   if (upprCaseLet != null) {
-    alert("You chose to have UPPERCASE LETTERS in your password");
+    alert("CONFIRMED UPPERCASE LETTERS ");
     upprCaseLet = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
     pswCrit = pswCrit.concat(upprCaseLet);
-    console.log(pswCrit);
   }else {
-    alert("NO UPPERCASE LETTERS in your password")
+    alert("NO UPPERCASE LETTERS")
   }
-    
   // 4. numbers
   var numbers = prompt("Numbers? OK = YES Cancel = NO");
   if (numbers !== null) {
-    alert("You chose to have NUMBERS in your password")
+    alert("CONFIRMED NUMBERS");
     numbers = [1234567890];
     pswCrit = pswCrit.concat(numbers); 
-    console.log(pswCrit);
   } else {
-    alert("NO NUMBERS in your password")
+    alert("NO NUMBERS in your password");
   }
-  
   // 5. special characters
   var specChar = prompt("Special characters? OK = YES Cancel = NO");
   if (specChar !== null) {
-    alert("You chose to have SPECIAL CHARACTERS in your password");
+    alert("CONFRIMED SPECIAL CHARACTERS");
     specChar = ["!@#$%&|~"];
     pswCrit = pswCrit.concat(specChar); 
-    console.log(pswCrit);
   } else {
-    alert("NO SPECIAL CHARACTERS in your password")
+    alert("NO SPECIAL CHARACTERS")
   }
   // Randomizing the password criteria 
 
