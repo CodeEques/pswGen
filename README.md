@@ -30,10 +30,13 @@ Git Hub - The Coding Boot Camp - Xandromus
 UoT TA's
 UoT fellow students
 W3Schools
+MDN
+Paul Keldsen - Web Development 
+
 
  -->
 
  <!-- Mock up -->
 
-
+[alt text](./Develop/password_generator_screenshot.png)
  
